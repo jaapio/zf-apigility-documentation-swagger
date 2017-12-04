@@ -17,7 +17,7 @@
                     return sprintf(
                         '<a href="%s">v%s</a>',
                         $view->url('zf-apigility/swagger/api', array(
-                            'api' => sprintf('%s-v%s', $name, $version),
+                            'api' => sprintf('%s-v%s', str_replace('\\', '.', $name), $version),
                         )),
                         $view->escapeHtml($version)
                     );
